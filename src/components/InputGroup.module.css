@@ -1,0 +1,28 @@
+.inputGroup {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: var(--fs-600);
+}
+
+.inputGroup > input {
+  width: 90%;
+  padding: 0.8em;
+  border-radius: 0.4em;
+  border: none;
+  outline: none;
+  background-color: var(--clr-primary-100);
+  color: inherit;
+  box-shadow: 0 0 2px var(--clr-black);
+}
+
+.inputGroup > input:focus {
+  outline: 2px solid var(--clr-primary-700);
+  outline-offset: 4px;
+  box-shadow: none;
+}
+
+.inputGroup > label {
+  font-size: var(--fs-800);
+  font-weight: 700;
+}
