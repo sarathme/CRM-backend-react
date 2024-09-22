@@ -8,7 +8,7 @@
   transform: translate(-50%, -50%);
   border-radius: 0.4em;
   padding: 2.5em;
-  color: var(--clr-primary-700);
+  color: var(--clr-primary-600);
   box-shadow: 0 0 4px var(--clr-accent-100);
 }
 
@@ -20,7 +20,7 @@
 }
 
 .container > [type="submit"] {
-  background-color: var(--clr-primary-400);
+  background-color: var(--clr-primary-700);
   color: var(--clr-accent-100);
   font-size: 1.5rem;
   padding: 0.6em 1.5em;
@@ -30,9 +30,11 @@
   outline: none;
   cursor: pointer;
   transition: background-color 250ms, padding 250ms;
+  box-shadow: 0 0 4px var(--clr-black);
 }
 
-.container > [type="submit"]:hover {
-  background-color: var(--clr-primary-600);
+.container > [type="submit"]:hover,
+.container > [type="submit"]:focus {
+  background-color: var(--clr-primary-800);
   padding: 0.6em 2em;
 }
