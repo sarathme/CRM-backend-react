@@ -1,0 +1,27 @@
+.app {
+  width: min(110rem, 95%);
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--clr-accent-100);
+  min-height: 90vh;
+  max-height: 95vh;
+  border-radius: 0.45em;
+  box-shadow: 0 0 8px var(--clr-black);
+  color: var(--clr-primary-900);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 0.4fr 1fr 1fr;
+  grid-template-areas:
+    "header header header"
+    "sidebar content content"
+    "sidebar content content";
+}
+
+.content {
+  grid-area: content;
+  padding: 0.8em;
+  overflow-y: auto;
+}
