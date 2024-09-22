@@ -10,14 +10,14 @@
   padding: 0.8em;
   border-radius: 0.4em;
   border: none;
-  outline: none;
+  outline: 2px solid var(--clr-primary-600);
   background-color: var(--clr-primary-100);
   color: inherit;
-  box-shadow: 0 0 2px var(--clr-black);
+  /* box-shadow: 0 0 4px var(--clr-primary-900); */
 }
 
 .inputGroup > input:focus {
-  outline: 2px solid var(--clr-primary-700);
+  outline: 3px solid var(--clr-primary-600);
   outline-offset: 4px;
   box-shadow: none;
 }
