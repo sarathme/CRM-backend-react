@@ -1,0 +1,28 @@
+.header {
+  padding: 1.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--fs-800);
+  color: var(--clr-accent-100);
+  grid-area: header;
+  background-color: var(--clr-primary-600);
+  border: none;
+}
+
+.header > .user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: var(--fs-800);
+  font-weight: 900;
+}
+
+.header > .user > img {
+  --width: 3rem;
+  background-color: black;
+  width: var(--width);
+  height: var(--width);
+  border-radius: 50%;
+  cursor: pointer;
+}
