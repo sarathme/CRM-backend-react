@@ -1,0 +1,18 @@
+.row {
+  display: flex;
+
+  margin-bottom: var(--fs-800);
+  padding: 0.6em 0;
+}
+
+.horizantal {
+  justify-content: space-between;
+  align-items: center;
+  align-items: center;
+}
+
+.vertical {
+  flex-direction: column;
+  gap: var(--fs-800);
+  overflow-y: auto;
+}
