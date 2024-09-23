@@ -1,6 +1,5 @@
 import styles from "./Feedbacks.module.css";
 import { useFeedbacks } from "../hooks/useFeedbacks";
-import { PAGE_SIZE } from "../utils/constants";
 
 import FeedbackCard from "../components/FeedbackCard";
 import Filter from "../ui/Filter";
@@ -36,14 +35,11 @@ function Feedbacks() {
       </div>
       {totalPages > 1 && (
         <div className={styles.footer}>
-          <p>
-            Showing <span>{(page - 1) * PAGE_SIZE + 1}</span> to{" "}
-            <span>
-              {page === totalPages ? totalFeedbacks : PAGE_SIZE * page}
-            </span>{" "}
-            of <span>{totalFeedbacks}</span> Results
-          </p>
-          <Paginate page={page} totalPages={totalPages} />
+          <Paginate
+            page={page}
+            totalPages={totalPages}
+            totalFeedbacks={totalFeedbacks}
+          />
         </div>
       )}
     </>
