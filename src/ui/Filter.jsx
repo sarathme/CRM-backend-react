@@ -7,6 +7,7 @@ function Filter({ filter, options }) {
 
   function handleClick(value) {
     searchParams.set(filter, value);
+    searchParams.set("page", 1);
     setSearchParams(searchParams);
   }
   return (

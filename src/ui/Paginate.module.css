@@ -1,0 +1,31 @@
+.paginate {
+  display: flex;
+  gap: 1rem;
+}
+.paginate > button {
+  padding: 0.9em;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  /* border: 2px solid var(--clr-primary-600); */
+  font-size: var(--fs-800);
+  color: var(--clr-primary-600);
+  border-radius: 1em;
+  display: flex;
+  align-items: center;
+}
+
+.paginate > button > span {
+  font-size: var(--fs-600);
+}
+
+.paginate > button:hover {
+  background-color: var(--clr-primary-600);
+  color: var(--clr-accent-200);
+}
+
+.paginate > button:disabled {
+  cursor: not-allowed;
+  background-color: transparent;
+  color: var(--clr-grey-300);
+}

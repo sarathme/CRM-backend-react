@@ -1,20 +1,29 @@
 import axios from "axios";
 
-export async function getAllFeedbacks({ filter }) {
+export async function getAllFeedbacks({ filter, page, limit }) {
   let url = `${import.meta.env.VITE_API_URL}/api/v1/feedbacks`;
-  if (filter !== null)
-    url = `${import.meta.env.VITE_API_URL}/api/v1/feedbacks?${filter.field}=${
-      filter.value
-    }`;
+
+  // Contructing query parameter
+  const queryParams = new URLSearchParams();
+
+  // Filter
+  if (filter && filter.feedbackType) {
+    queryParams.append("feedbackType", filter.feedbackType);
+  }
+
+  // Pagination
+  queryParams.append("page", page);
+  queryParams.append("limit", limit);
+
   try {
-    console.log(url);
-    const res = await axios.get(url, {
+    const res = await axios.get(`${url}?${queryParams.toString()}`, {
       withCredentials: true,
     });
 
     return {
       feedbacks: res.data.data.feedbacks,
       totalFeedbacks: res.data.totalFeedbacks,
+      totalPages: res.data.totalPages,
     };
   } catch (err) {
     console.log("Error 💥:", err);
