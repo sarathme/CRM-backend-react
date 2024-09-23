@@ -1,0 +1,6 @@
+.container {
+  grid-area: content;
+  padding: 1em;
+  display: grid;
+  grid-template-rows: 3rem 5rem minmax(10rem 20rem) auto;
+}

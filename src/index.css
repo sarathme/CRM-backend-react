@@ -9,11 +9,13 @@
   --clr-primary-800: #088395;
   --clr-primary-700: #227b94;
   --clr-primary-600: #0b8494;
-  --clr-primary-400: #36c2ce;
-  --clr-primary-200: #77e4c8;
-  --clr-accent-200: #f5f7f8;
+  --clr-primary-400: #52cdd8;
+  --clr-primary-200: #c1f3f7;
+  --clr-accent-200: #f7f9f2;
   --clr-accent-100: #f5f5f5;
 
+  --clr-black-50: hsla(0, 0%, 0%, 0.5);
+  --clr-grey-200: hsl(0, 0%, 87%);
   --clr-black: hsl(0, 0%, 0%);
   --clr-white: #ffffff;
 
