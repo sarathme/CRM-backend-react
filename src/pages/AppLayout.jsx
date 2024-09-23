@@ -3,14 +3,16 @@ import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 import styles from "./AppLayout.module.css";
 
+import Container from "../components/Container";
+
 function AppLayout() {
   return (
     <div className={styles.app}>
       <Header />
       <Sidebar />
-      <main className={styles.content}>
+      <Container>
         <Outlet />
-      </main>
+      </Container>
     </div>
   );
 }
