@@ -1,0 +1,14 @@
+.primary {
+  font-size: var(--fs-xl);
+  font-weight: 700;
+}
+
+.secondary {
+  font-size: var(--fs-800);
+  font-weight: 600;
+}
+
+.tertiary {
+  font-size: var(--fs-600);
+  font-weight: 500;
+}

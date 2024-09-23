@@ -1,0 +1,32 @@
+.filter {
+  /* border: 1px solid var(--clr-black-50); */
+  background-color: var(--clr-accent-200);
+  box-shadow: 0 0 4px var(--clr-black-50);
+  border-radius: 0.4em;
+  padding: 0.4em;
+  display: flex;
+  gap: 0.4rem;
+}
+
+.btn {
+  background-color: var(--clr-accent-200);
+
+  border: none;
+  border-radius: 0.6rem;
+  font-weight: 500;
+  padding: 0.2em 0.65em;
+  font-size: var(--fs-800);
+  cursor: pointer;
+}
+
+.btn:focus {
+  background-color: var(--clr-primary-600);
+  color: var(--clr-accent-200);
+
+  outline: none;
+}
+
+.active {
+  background-color: var(--clr-primary-600);
+  color: var(--clr-accent-200);
+}
