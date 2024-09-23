@@ -1,7 +1,18 @@
 .content {
   padding: 1em;
   overflow-y: auto;
-  background: var(--clr-grey-200);
+  background: var(--clr-grey-100);
+
+  position: relative;
+}
+
+.content > p {
+  position: absolute;
+  font-size: var(--fs-xl);
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .footer {
@@ -10,7 +21,7 @@
   /* border-top: 1px solid var(--clr-primary-900); */
   font-size: var(--fs-600);
   /* background-color: red; */
-  padding: 1em 1.5em;
+  padding: 1em;
 }
 
 .footer > p > span {

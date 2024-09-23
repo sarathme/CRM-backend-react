@@ -21,7 +21,7 @@ function FeedbackCard({ feedback }) {
         <h3>{feedback.feedbackType.toUpperCase()}</h3>
       </div>
       <div className={styles.cta}>
-        <Link>Learn More</Link>
+        <Link>View</Link>
       </div>
     </div>
   );
