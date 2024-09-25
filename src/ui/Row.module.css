@@ -6,9 +6,9 @@
 }
 
 .horizantal {
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  align-items: center;
+  gap: 1rem;
 }
 
 .vertical {

@@ -6,6 +6,10 @@ import AppLayout from "./pages/AppLayout";
 import Feedbacks from "./pages/Feedbacks";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import PageNotFound from "./pages/PageNotFound";
+import Queries from "./pages/Queries";
+import Products from "./pages/Products";
+import Customers from "./pages/Customers";
+import Dashboard from "./pages/Dashboard";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -25,11 +29,11 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/app" element={<AppLayout />}>
             <Route index element={<Navigate to="dashboard" />} />
-            <Route path="dashboard" element={<h1>Dashboard</h1>} />
-            <Route path="queries" element={<h1>Queries</h1>} />
+            <Route path="dashboard" element={<Dashboard />} />
+            <Route path="queries" element={<Queries />} />
             <Route path="feedbacks" element={<Feedbacks />} />
-            <Route path="products" element={<h1>Products</h1>} />
-            <Route path="customers" element={<h1>Customers</h1>} />
+            <Route path="products" element={<Products />} />
+            <Route path="customers" element={<Customers />} />
           </Route>
           <Route path="*" element={<PageNotFound />} />
         </Routes>

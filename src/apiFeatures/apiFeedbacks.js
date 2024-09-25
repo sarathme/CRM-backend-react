@@ -30,3 +30,20 @@ export async function getAllFeedbacks({ filter, page, limit }) {
     throw new Error(err.response.data.message);
   }
 }
+
+export async function getFeedbackStats() {
+  let url = `${import.meta.env.VITE_API_URL}/api/v1/feedbacks/stats`;
+
+  try {
+    const res = await axios.get(url, {
+      withCredentials: true,
+    });
+
+    return {
+      feedbackStats: res.data.data.stats,
+    };
+  } catch (err) {
+    console.log("Error 💥:", err);
+    throw new Error(err.response.data.message);
+  }
+}

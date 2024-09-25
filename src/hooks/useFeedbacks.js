@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { getAllFeedbacks } from "../apiFeatures/apiFeedbacks";
+import { getAllFeedbacks, getFeedbackStats } from "../apiFeatures/apiFeedbacks";
 import { useSearchParams } from "react-router-dom";
 import { PAGE_SIZE } from "../utils/constants";
 
@@ -21,4 +21,13 @@ export function useFeedbacks() {
   });
 
   return { isLoading, data, error, page };
+}
+
+export function useFeedbackStats() {
+  const { isLoading, data, error } = useQuery({
+    queryKey: ["feedbackStats"],
+    queryFn: getFeedbackStats,
+  });
+
+  return { isLoading, data, error };
 }
