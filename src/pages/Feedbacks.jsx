@@ -1,4 +1,3 @@
-import styles from "./Feedbacks.module.css";
 import { useFeedbacks } from "../hooks/useFeedbacks";
 
 import FeedbackCard from "../components/FeedbackCard";
@@ -6,6 +5,8 @@ import Filter from "../ui/Filter";
 import Heading from "../ui/Heading";
 import Paginate from "../ui/Paginate";
 import Row from "../ui/Row";
+import TabContent from "../components/TabContent";
+import TabFooter from "../components/TabFooter";
 
 function Feedbacks() {
   const { isLoading, data, page } = useFeedbacks();
@@ -27,20 +28,20 @@ function Feedbacks() {
           ]}
         />
       </Row>
-      <div className={styles.content}>
+      <TabContent>
         {!feedbacks.length && <p>No Results Found</p>}
         {feedbacks.map((feedback) => (
           <FeedbackCard key={feedback._id} feedback={feedback} />
         ))}
-      </div>
+      </TabContent>
       {totalPages > 1 && (
-        <div className={styles.footer}>
+        <TabFooter>
           <Paginate
             page={page}
             totalPages={totalPages}
-            totalFeedbacks={totalFeedbacks}
+            totalDocs={totalFeedbacks}
           />
-        </div>
+        </TabFooter>
       )}
     </>
   );

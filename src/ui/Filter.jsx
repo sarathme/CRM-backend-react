@@ -1,5 +1,6 @@
 import { useSearchParams } from "react-router-dom";
 import styles from "./Filter.module.css";
+import Heading from "./Heading";
 
 function Filter({ filter, options }) {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -12,6 +13,7 @@ function Filter({ filter, options }) {
   }
   return (
     <div className={styles.filter}>
+      <Heading type="tertiary">{`${filter.toUpperCase()} :`}</Heading>
       {options.map((option) => (
         <button
           key={option.value}

@@ -1,0 +1,12 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  /* border-top: 1px solid var(--clr-primary-900); */
+  font-size: var(--fs-600);
+  /* background-color: red; */
+  padding: 1em;
+}
+
+.footer > p > span {
+  font-weight: 700;
+}
