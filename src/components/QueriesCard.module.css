@@ -1,0 +1,73 @@
+.card {
+  padding: 1em;
+  width: 95%;
+  margin: 0 auto;
+  background-color: var(--clr-accent-100);
+  min-height: 9rem;
+  max-height: 10rem;
+  border-radius: 0.4em;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 4px var(--clr-black-50);
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card > * {
+}
+
+.body {
+  width: 50%;
+}
+
+.body > p {
+  font-size: var(--fs-600);
+  font-weight: 600;
+}
+
+.body > p span {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.typeBadge {
+  width: 15%;
+  font-size: var(--fs-400);
+  text-align: center;
+  padding: 1em;
+  background: var(--clr-primary-900);
+  border-radius: 50vw;
+}
+
+.typeBadge > h3 {
+  text-align: center;
+  color: var(--clr-accent-200);
+  font-weight: 900;
+}
+
+.cta {
+  width: 20%;
+}
+
+.cta > a:link,
+.cta > a:visited {
+  padding: 0.4em 0.6em;
+  background-color: var(--clr-primary-600);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: var(--fs-600);
+  color: var(--clr-accent-200);
+  font-weight: 700;
+  border-radius: 0.4em;
+  transition: padding 250ms;
+  text-decoration: none;
+}
+
+.cta > a:focus,
+.cta > a:hover {
+  background-color: var(--clr-primary-600);
+  background-color: var(--clr-primary-700);
+  padding: 0.4em 1.2em;
+}
