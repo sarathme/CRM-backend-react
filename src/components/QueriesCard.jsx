@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import Heading from "../ui/Heading";
 import styles from "./QueriesCard.module.css";
+import { format } from "date-fns";
+import Badge from "../ui/Badge";
 
 function QueriesCard({ query }) {
   return (
@@ -12,18 +14,26 @@ function QueriesCard({ query }) {
           <span>{`${query.customerId.firstName} ${query.customerId.lastName}`}</span>
         </p>
         <p>
-          Raised on: <span>Date</span>
+          Raised on: <span>{format(query.raisedAt, "dd-MM-yyyy")}</span>
         </p>
       </div>
 
-      <div className={styles.typeBadge}>
-        <h3>{query.status.toUpperCase()}</h3>
-      </div>
-      <div className={styles.typeBadge}>
-        <h3>{query.queryType.toUpperCase()}</h3>
-      </div>
+      <Badge
+        value={query.status.toUpperCase()}
+        type={query.status === "open" ? "primary" : "secondary"}
+      />
+      <Badge
+        value={query.queryType.toUpperCase()}
+        type={
+          query.queryType === "product"
+            ? "primary"
+            : query.queryType === "order"
+            ? "secondary"
+            : "tertiary"
+        }
+      />
       <div className={styles.cta}>
-        <Link>Open Query</Link>
+        <Link to={`${query._id}`}>Open Query</Link>
       </div>
     </div>
   );

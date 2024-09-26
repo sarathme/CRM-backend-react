@@ -10,8 +10,7 @@
 }
 
 .btn {
-  background-color: var(--clr-accent-200);
-
+  background-color: transparent;
   border: none;
   border-radius: 0.6rem;
   font-weight: 500;
@@ -20,7 +19,8 @@
   cursor: pointer;
 }
 
-.btn:focus {
+.btn:focus,
+.btn:hover {
   background-color: var(--clr-primary-600);
   color: var(--clr-accent-200);
 

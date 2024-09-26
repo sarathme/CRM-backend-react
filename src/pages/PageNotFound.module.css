@@ -10,3 +10,29 @@
   background-color: var(--clr-accent-200);
   padding: 1em;
 }
+
+.container > h1 {
+  margin: 20rem auto 3rem;
+  text-align: center;
+}
+
+.container > a:link,
+.container > a:visited {
+  display: block;
+  padding: 0.6em 1em;
+  width: 25%;
+  margin: 0 auto;
+  text-decoration: none;
+  font-size: var(--fs-800);
+  font-weight: 700;
+  background-color: var(--clr-primary-600);
+  color: var(--clr-accent-100);
+  text-align: center;
+  border-radius: 0.2em;
+  transition: transform 250ms;
+}
+
+.container > a:hover,
+.container > a:focus {
+  transform: scale(1.05);
+}

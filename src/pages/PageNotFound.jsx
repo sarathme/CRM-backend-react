@@ -4,7 +4,7 @@ import styles from "./PageNotFound.module.css";
 function PageNotFound() {
   return (
     <div className={styles.container}>
-      <Heading>Page Not Found</Heading>
+      <Heading>This Route is not defined</Heading>
       <Link to="/app">Return to App</Link>
     </div>
   );

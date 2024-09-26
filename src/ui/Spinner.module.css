@@ -1,0 +1,35 @@
+.spinner {
+  margin: 5rem auto;
+  position: relative;
+  width: 3.5rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(
+        farthest-side,
+        var(--clr-primary-600) 95%,
+        var(--clr-grey-100)
+      )
+      top/10px 10px no-repeat,
+    conic-gradient(var(--clr-grey-100) 30%, var(--clr-primary-600));
+  animation: rotate 1.5s infinite linear;
+}
+
+.spinner::after {
+  content: "";
+  background: var(--clr-grey-100);
+  width: 65%;
+  height: 65%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: 0;
+  bottom: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(1turn);
+  }
+}

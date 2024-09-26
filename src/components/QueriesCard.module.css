@@ -31,21 +31,6 @@
   font-weight: 400;
 }
 
-.typeBadge {
-  width: 15%;
-  font-size: var(--fs-400);
-  text-align: center;
-  padding: 1em;
-  background: var(--clr-primary-900);
-  border-radius: 50vw;
-}
-
-.typeBadge > h3 {
-  text-align: center;
-  color: var(--clr-accent-200);
-  font-weight: 900;
-}
-
 .cta {
   width: 20%;
 }

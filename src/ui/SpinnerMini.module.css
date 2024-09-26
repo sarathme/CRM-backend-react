@@ -1,0 +1,11 @@
+@keyframes rotate {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.spinnerMini {
+  width: 2rem;
+  height: 1.5rem;
+  animation: rotate 1.5s infinite linear;
+}

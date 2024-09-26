@@ -26,3 +26,9 @@
   font-size: var(--fs-800);
   font-weight: 700;
 }
+
+.inputGroup > label > span {
+  font-size: var(--fs-400);
+  margin-left: 0.5rem;
+  color: red;
+}

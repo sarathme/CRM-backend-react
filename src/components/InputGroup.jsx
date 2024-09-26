@@ -10,6 +10,8 @@ function InputGroup({
   onBlur,
   error,
   errMsg,
+  autoComplete,
+  disabled,
 }) {
   return (
     <div className={styles.inputGroup}>
@@ -25,6 +27,8 @@ function InputGroup({
         value={value}
         onChange={onChange}
         onBlur={onBlur}
+        autoComplete={autoComplete}
+        disabled={disabled}
       />
     </div>
   );

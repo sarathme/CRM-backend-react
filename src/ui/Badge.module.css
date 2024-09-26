@@ -1,0 +1,21 @@
+.badge {
+  width: 10%;
+  font-size: var(--fs-400);
+  text-align: center;
+  padding: 1em;
+
+  border-radius: 50vw;
+  text-align: center;
+  color: var(--clr-accent-200);
+  font-weight: 900;
+}
+
+.primary {
+  background: var(--clr-primary-600);
+}
+.secondary {
+  background: var(--clr-secondary-400);
+}
+.tertiary {
+  background: var(--clr-primary-700);
+}

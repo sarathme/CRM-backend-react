@@ -6,11 +6,10 @@ import Filter from "../ui/Filter";
 import Heading from "../ui/Heading";
 import Paginate from "../ui/Paginate";
 import Row from "../ui/Row";
+import Spinner from "../ui/Spinner";
 
 function Queries() {
-  const { data, isLoading, page } = useQueries();
-
-  if (isLoading) return <p>Loading....</p>;
+  const { data = {}, isLoading, page } = useQueries();
 
   const { queries, totalPages, totalQueries } = data;
 
@@ -37,10 +36,10 @@ function Queries() {
         />
       </Row>
       <TabContent>
-        {!queries.length && <p>No Results Found</p>}
-        {queries.map((query) => (
-          <QueriesCard key={query._id} query={query} />
-        ))}
+        {isLoading && <Spinner />}
+        {!isLoading && !queries.length && <p>No Results Found</p>}
+        {!isLoading &&
+          queries.map((query) => <QueriesCard key={query._id} query={query} />)}
       </TabContent>
       {totalPages > 1 && (
         <TabFooter>
