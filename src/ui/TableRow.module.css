@@ -1,10 +1,12 @@
 .row {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1.5fr 0.6fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr 1fr 1.5fr;
 }
 
 .row > p {
   font-size: var(--fs-800);
   font-weight: 400;
   text-align: center;
+  padding: 0.6em;
+  border: 1px solid var(--clr-grey-200);
 }

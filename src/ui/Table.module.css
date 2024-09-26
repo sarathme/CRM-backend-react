@@ -2,3 +2,12 @@
   border: 1px solid var(--clr-black-50);
   min-height: 10rem;
 }
+
+.table > p {
+  font-size: var(--fs-800);
+  font-weight: 700;
+  /* width: %; */
+  /* margin: 1rem auto; */
+  text-align: center;
+  margin-top: 2.5rem;
+}

@@ -30,7 +30,7 @@ function Paginate({ page, totalPages, totalDocs }) {
           <HiChevronLeft />
           <span>Previous</span>
         </button>
-        <button onClick={nextPage} disabled={page === totalPages}>
+        <button onClick={nextPage} disabled={page >= totalPages}>
           <span>Next</span>
           <HiChevronRight />
         </button>

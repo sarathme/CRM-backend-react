@@ -1,10 +1,14 @@
 .headerContainer {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1.5fr 0.6fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr 1fr 1.5fr;
+  position: sticky;
+  top: -2rem;
 }
 
 .headerContainer > * {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--clr-grey-300);
   color: var(--clr-accent-100);
   padding: 0.6em;

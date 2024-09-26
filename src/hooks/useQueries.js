@@ -19,8 +19,6 @@ export function useQueries() {
     filter.status = status;
   }
 
-  console.log(filter);
-
   const { isLoading, data, error } = useQuery({
     queryKey: ["queries", queryType, status, page],
     queryFn: () => getAllQueries({ filter, page, limit: PAGE_SIZE }),
