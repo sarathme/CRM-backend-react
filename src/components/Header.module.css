@@ -16,6 +16,8 @@
   gap: 1rem;
   font-size: var(--fs-800);
   font-weight: 900;
+  position: relative;
+  cursor: pointer;
 }
 
 .header > .user > img {
@@ -24,5 +26,42 @@
   width: var(--width);
   height: var(--width);
   border-radius: 50%;
+}
+
+.user h4 {
+  font-weight: 700;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.dropdown {
+  position: absolute;
+  width: 150%;
+
+  background-color: var(--clr-accent-300);
+  border-radius: 0.4em;
+  border: 1px solid var(--clr-black-50);
+  top: 120%;
+  left: -50%;
+  box-shadow: 0 0 4px var(--clr-grey-300);
+  padding: 0.6em;
+}
+
+.dropdown > button {
+  background-color: transparent;
+  padding: 0.4em;
+  width: 100%;
   cursor: pointer;
+  border: none;
+  font-size: var(--fs-800);
+  color: var(--clr-primary-600);
+  font-weight: 700;
+  border-radius: 0.4em;
+}
+
+.dropdown > button:hover,
+.dropdown > button:focus {
+  background-color: var(--clr-primary-600);
+  color: var(--clr-accent-300);
 }

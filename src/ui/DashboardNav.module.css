@@ -1,0 +1,28 @@
+.navContainer {
+  font-size: var(--fs-600);
+  display: flex;
+  gap: 1rem;
+  padding: 1em;
+  align-items: center;
+  background-color: var(--clr-accent-300);
+  width: fit-content;
+  margin-bottom: 1rem;
+  border-radius: 0.4em;
+}
+
+.navContainer > a:link,
+.navContainer > a:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: var(--clr-primary-600);
+  padding: 0.2em 1em;
+  border-radius: 0.4em;
+}
+
+.navContainer > a:hover,
+.navContainer > a:focus,
+.navContainer > a:global(.active) {
+  background-color: var(--clr-primary-600);
+  color: var(--clr-accent-300);
+}
