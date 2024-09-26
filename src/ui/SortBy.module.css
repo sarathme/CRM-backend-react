@@ -1,0 +1,23 @@
+.label {
+  font-size: var(--fs-800);
+  font-weight: 700;
+  color: var(--clr-primary-600);
+}
+
+.select {
+  font-size: var(--fs-800);
+  padding: 0.2em 0.2em 0.2em 1em;
+  /* width: 25%; */
+  border-radius: 0.4em;
+  border: 2px solid var(--clr-primary-600);
+  background-color: var(--clr-accent-100);
+  outline: none;
+  color: var(--clr-primary-600);
+  font-weight: 700;
+}
+
+.select:focus {
+  outline: 2px solid var(--clr-primary-600);
+  outline-offset: 1px;
+  border: none;
+}
