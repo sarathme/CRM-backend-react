@@ -7,11 +7,10 @@ import Paginate from "../ui/Paginate";
 import Row from "../ui/Row";
 import TabContent from "../components/TabContent";
 import TabFooter from "../components/TabFooter";
+import Spinner from "../ui/Spinner";
 
 function Feedbacks() {
-  const { isLoading, data, page } = useFeedbacks();
-
-  if (isLoading) return <p>Loading....</p>;
+  const { isLoading, data = {}, page } = useFeedbacks();
 
   const { feedbacks, totalFeedbacks, totalPages } = data;
 
@@ -29,10 +28,12 @@ function Feedbacks() {
         />
       </Row>
       <TabContent>
-        {!feedbacks.length && <p>No Results Found</p>}
-        {feedbacks.map((feedback) => (
-          <FeedbackCard key={feedback._id} feedback={feedback} />
-        ))}
+        {isLoading && <Spinner />}
+        {!isLoading && !feedbacks.length && <p>No Results Found</p>}
+        {!isLoading &&
+          feedbacks.map((feedback) => (
+            <FeedbackCard key={feedback._id} feedback={feedback} />
+          ))}
       </TabContent>
       {totalPages > 1 && (
         <TabFooter>
