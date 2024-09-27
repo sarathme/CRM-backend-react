@@ -1,0 +1,31 @@
+.card {
+  padding: 1em;
+  width: 95%;
+  margin: 0 auto;
+  background-color: var(--clr-accent-100);
+  min-height: 9rem;
+  max-height: 10rem;
+  border-radius: 0.4em;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 4px var(--clr-black-50);
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.body {
+  width: 55%;
+  display: grid;
+  gap: 1rem;
+}
+
+.body > p {
+  font-size: var(--fs-600);
+  font-weight: 600;
+}
+
+.body > p span {
+  font-style: italic;
+  font-weight: 400;
+}
