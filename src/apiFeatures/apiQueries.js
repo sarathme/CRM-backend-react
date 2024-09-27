@@ -22,6 +22,9 @@ export async function getAllQueries({ filter, page, limit }) {
   try {
     const res = await axios.get(`${url}?${queryParams.toString()}`, {
       withCredentials: true,
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("crm-token")}`,
+      },
     });
 
     return {
@@ -40,6 +43,9 @@ export async function getQueryStats() {
   try {
     const res = await axios.get(`${url}`, {
       withCredentials: true,
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("crm-token")}`,
+      },
     });
 
     return {

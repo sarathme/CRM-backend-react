@@ -17,9 +17,9 @@ function Header() {
         <img src="/user-default.png" alt="User Image" />
         <h4>
           {user.name.toUpperCase()}{" "}
-          <spam>
+          <span>
             <HiChevronDown size={32} />
-          </spam>
+          </span>
         </h4>
         {showDropdown && (
           <div className={`${styles.dropdown}`}>

@@ -20,6 +20,9 @@ export async function getAllProducts({ page, limit, sort }) {
   try {
     const res = await axios.get(`${url}?${queryParams.toString()}`, {
       withCredentials: true,
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("crm-token")}`,
+      },
     });
 
     return {
@@ -39,6 +42,9 @@ export async function getProductStats() {
   try {
     const res = await axios.get(url, {
       withCredentials: true,
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("crm-token")}`,
+      },
     });
 
     return {

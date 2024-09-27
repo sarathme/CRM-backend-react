@@ -12,7 +12,6 @@ const initialState = {
 function reducer(state, action) {
   switch (action.type) {
     case "login":
-      console.log("logging in:", action.payload);
       return { ...state, user: action.payload, isAuthenticated: true };
     case "logout":
       return { ...state, user: null, isAuthenticated: false };
@@ -31,10 +30,8 @@ function AuthProvider({ children }) {
     const user = localStorage.getItem("crm-user");
 
     if (!user || user === null) {
-      console.log("logged out");
       dispatch({ type: "logout" });
     } else {
-      console.log(JSON.parse(user));
       dispatch({ type: "login", payload: JSON.parse(user) });
     }
   }, []);

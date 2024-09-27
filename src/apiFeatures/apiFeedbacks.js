@@ -18,6 +18,9 @@ export async function getAllFeedbacks({ filter, page, limit }) {
   try {
     const res = await axios.get(`${url}?${queryParams.toString()}`, {
       withCredentials: true,
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("crm-token")}`,
+      },
     });
 
     return {
@@ -37,6 +40,9 @@ export async function getFeedbackStats() {
   try {
     const res = await axios.get(url, {
       withCredentials: true,
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("crm-token")}`,
+      },
     });
 
     return {

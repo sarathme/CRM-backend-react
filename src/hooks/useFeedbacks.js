@@ -16,7 +16,7 @@ export function useFeedbacks() {
       : { feedbackType: filterValue };
 
   const { isLoading, data, error } = useQuery({
-    queryKey: ["feedbacks", filterValue, page],
+    queryKey: ["feedbacks", filterValue, page, PAGE_SIZE],
     queryFn: () => getAllFeedbacks({ filter, page, limit: PAGE_SIZE }),
   });
 

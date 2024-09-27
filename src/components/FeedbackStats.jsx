@@ -6,7 +6,8 @@ import Stat from "../ui/Stat";
 import Stats from "./Stats";
 
 function FeedbackStats() {
-  const { isLoading, data } = useFeedbackStats();
+  const { isLoading, data = {} } = useFeedbackStats();
+
   return (
     <>
       <Heading>Feedbacks</Heading>
