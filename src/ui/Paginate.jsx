@@ -6,7 +6,6 @@ import { PAGE_SIZE } from "../utils/constants";
 function Paginate({ page, totalPages, totalDocs }) {
   const [searchParams, setSearchParams] = useSearchParams();
   function nextPage() {
-    console.log("Next");
     const next = page === totalPages ? page : page + 1;
 
     searchParams.set("page", next);

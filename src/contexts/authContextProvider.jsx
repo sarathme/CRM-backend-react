@@ -64,7 +64,6 @@ function AuthProvider({ children }) {
     localStorage.removeItem("crm-token");
     toast.success("User logged out");
     dispatch({ type: "logout" });
-    console.log(`logged out`);
   }
 
   return (

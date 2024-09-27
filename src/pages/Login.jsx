@@ -34,8 +34,6 @@ function Login() {
     initialValues,
     validate,
     onSubmit: async (values) => {
-      console.log(values);
-      console.log(`Submit`);
       const loginToast = toast.loading("Logging In Please Wait");
       try {
         await login(values);

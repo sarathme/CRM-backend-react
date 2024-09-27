@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useAuth } from "../contexts/authContextProvider";
 import styles from "./Header.module.css";
-import { HiChevronDown, HiOutlineChevronDown } from "react-icons/hi2";
+import { HiChevronDown } from "react-icons/hi2";
 
 function Header() {
   const { user, logout } = useAuth();

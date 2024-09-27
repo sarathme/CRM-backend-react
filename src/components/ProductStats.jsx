@@ -8,7 +8,6 @@ import { useProductStats } from "../hooks/useProducts";
 function ProductStats() {
   const { isLoading, data = {} } = useProductStats();
 
-  console.log(data);
   return (
     <>
       <Heading>Product Statistics</Heading>
