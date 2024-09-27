@@ -5,7 +5,7 @@ function PageNotFound() {
   return (
     <div className={styles.container}>
       <Heading>This Route is not defined</Heading>
-      <Link to="/app">Return to App</Link>
+      <Link to={-1}>Return to App</Link>
     </div>
   );
 }
